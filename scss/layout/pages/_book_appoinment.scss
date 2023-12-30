@@ -1,0 +1,32 @@
+.book-appoinment-detail {
+  padding: 8rem 0;
+  .container {
+    form {
+      .form-heading {
+        @include rubik-font(500, 2.4rem, normal);
+      }
+
+      .row {
+        border-bottom: 2px solid $secondary-color;
+        input,
+        select {
+          width: 100%;
+          padding: 1rem 2rem;
+          outline: none;
+          border: none;
+          border-radius: 0.5rem;
+          @include rubik-font(400, 1.6rem, normal);
+
+          // &:focus {
+          //   box-shadow: none;
+          // }
+        }
+
+        label {
+          @include rubik-font(400, 1.6rem, normal);
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

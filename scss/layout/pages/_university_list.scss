@@ -1,0 +1,61 @@
+.university-college-detail {
+  padding: 8rem 0;
+  .container {
+    .search-section {
+      justify-content: space-between;
+      .form-select,
+      input[type="search"],
+      .search-btn {
+        width: 100%;
+        padding: 1rem 2rem;
+        outline: none;
+        border: none;
+        border-radius: 0.5rem;
+        @include rubik-font(400, $vsm-font, normal);
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      .search-bar {
+        input {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        .search-btn {
+          width: 20%;
+          background: white;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      table {
+        min-width: 70.5rem;
+        tbody {
+          tr {
+            td {
+              vertical-align: middle;
+            }
+            td:last-child {
+              text-align: center;
+            }
+            .location-column {
+              display: flex;
+              column-gap: 0.5rem;
+              align-items: center;
+              figure {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

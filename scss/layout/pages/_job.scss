@@ -1,0 +1,176 @@
+.job-detail {
+  padding: 8rem 0;
+  .container {
+    .row {
+      .active {
+        background: $secondary-color !important;
+      }
+      #v-pills-tab {
+        row-gap: 0.2rem;
+        button {
+          @include rubik-font(500, $md-font, normal);
+          color: $black;
+          background: white;
+          display: flex;
+          align-items: center;
+          column-gap: 0.5rem;
+          border: none;
+          border-radius: 0;
+          padding: 0;
+
+          figure {
+            width: 5.5rem;
+            height: 5.5rem;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      //   second tabs box styling
+      #second-tabs-box {
+        row-gap: 0.2rem;
+        button {
+          display: flex;
+          background: white;
+          border-radius: 0;
+          figure {
+            width: 3rem;
+            height: 3rem;
+          }
+
+          ul {
+            text-align: start;
+            color: $black;
+            margin: 0;
+            padding: 0.3rem 0 0 0.5rem;
+            li:first-child {
+              @include rubik-font(400, $md-font, normal);
+              margin-bottom: 0.5rem;
+              list-style: none;
+            }
+
+            li ~ li {
+              @include rubik-font(300, $vsm-font, normal);
+              margin-bottom: 0.5rem;
+            }
+
+            li:last-child {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+
+      //   content box styling
+      .main-content {
+        background: $white;
+        .tab-content {
+          .tab-pane {
+            background: white !important;
+            .job-title {
+              @include rubik-font(500, 2.8rem, normal);
+            }
+            .job-apply-section {
+              ul {
+                display: flex;
+                column-gap: 0.5rem;
+                text-align: start;
+                color: $black;
+                margin: 0;
+                li:first-child {
+                  display: none;
+                }
+
+                li ~ li {
+                  @include rubik-font(300, 1.6rem, normal);
+                  list-style: disc;
+                  margin-right: 2rem;
+                }
+
+                li:last-child {
+                  color: $primary-color;
+                }
+              }
+
+              .custom-btn {
+                background: $primary-color;
+                color: $white;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                  background: $white;
+                  color: $primary-color;
+                }
+              }
+            }
+            .description {
+              ul {
+                list-style: none;
+                li {
+                  display: flex;
+                  column-gap: 0.5rem;
+                  &::before {
+                    content: "\f061";
+                    font-family: "Font Awesome 5 free";
+                    font-weight: 900;
+                    font-size: $vsm-font;
+                  }
+                }
+              }
+
+              ol {
+                padding-left: 4.5rem;
+                li {
+                  &::marker {
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+            // .job-info-sub-heading {
+            //   @include rubik-font(400, $md-font, normal);
+            // }
+            // p {
+            //   font-size: 1.6rem;
+            //   letter-spacing: 0.032rem;
+            // }
+
+            // .requirements {
+            //   padding-left: 1rem;
+            //   .requirement-item {
+            //     font-size: 1.6rem;
+            //     display: flex;
+            //     column-gap: 0.5rem;
+            //     i {
+            //       padding-top: 0.5rem;
+            //     }
+            //   }
+            // }
+
+            // .benefits {
+            //   padding-left: 1rem;
+            //   .benefit-item {
+            //     font-size: 1.6rem;
+            //     display: flex;
+            //     column-gap: 0.5rem;
+            //     i {
+            //       padding-top: 0.5rem;
+            //     }
+            //   }
+            // }
+
+            // .processes {
+            //   padding-left: 3rem;
+            //   .process-item {
+            //     font-size: 1.6rem;
+            //     font-weight: bold;
+            //     .paragraph {
+            //       font-weight: 300;
+            //     }
+            //   }
+            // }
+          }
+        }
+      }
+    }
+  }
+}

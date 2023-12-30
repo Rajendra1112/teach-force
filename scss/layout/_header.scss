@@ -1,0 +1,57 @@
+// header section
+header {
+  background: $primary-color;
+  @include rubik-font(400, $sm-font, 2.133rem);
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  .contact-header {
+    column-gap: 3rem;
+    li {
+      list-style: none;
+    }
+    i {
+      margin: 1rem;
+    }
+  }
+
+  .social-media-header {
+    padding-right: 0 !important;
+    i {
+      margin: 1.5rem;
+      font-size: $md-font;
+    }
+  }
+}
+
+.navbar-section {
+  .container {
+    .navbar {
+      padding: 1rem 0;
+      @include rubik-font(400, $md-font, 2.37rem);
+      background: none !important;
+      .navbar-nav {
+        .nav-item {
+          margin-left: 2rem;
+          .active {
+            background: $black;
+            color: $white;
+          }
+          .nav-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+        }
+        li:last-child {
+          .nav-link {
+            background: $primary-color;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

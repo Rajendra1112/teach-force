@@ -1,0 +1,110 @@
+.inner-blog-detail {
+  padding: 8rem 0;
+  .container {
+    .row {
+      .published-date {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        border-bottom: 2px solid $secondary-dark-color;
+        @include rubik-font(400, $sm-font, 2.8rem);
+        i {
+          margin-top: -1.1rem;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0 !important;
+        li {
+          display: flex;
+          column-gap: 1rem;
+          // margin-bottom: 0.5rem;
+          &::before {
+            content: "\f061";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: $md-font;
+            color: $primary-color;
+          }
+        }
+      }
+
+      .recent-articles-column {
+        .article-type {
+          padding: 1rem 1.5rem;
+          background: $primary-color;
+          color: white;
+          @include rubik-font(500, $md-font, normal);
+        }
+        .blog-card {
+          padding: 0;
+          &:hover {
+            &::after {
+              transform: translate(5rem, 2rem);
+            }
+          }
+        }
+        ul {
+          li {
+            &::before {
+              display: none;
+            }
+            margin-bottom: 3rem;
+          }
+        }
+      }
+    }
+  }
+  .faq-section {
+    background: $secondary-light-color;
+    .accordion {
+      --bs-accordion-bg: transparent;
+      --bs-accordion-btn-focus-border-color: none;
+      --bs-accordion-btn-focus-box-shadow: none;
+      --bs-accordion-active-color: red;
+      --bs-accordion-active-bg: transparent;
+
+      .accordion-item {
+        .accordion-header {
+          .accordion-button {
+            @include rubik-font(400, $sm-font, normal);
+            &::after {
+              display: none;
+            }
+            &::before {
+              content: "\2b";
+              color: $primary-color;
+              margin-right: 2rem;
+              font-size: 3rem;
+              width: 1.6rem;
+              height: 1.6rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            &:not(.collapsed) {
+              &::before {
+                content: "\f068";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                color: $primary-color;
+                margin-right: 2rem;
+                font-size: 2rem;
+                width: 1.6rem;
+                height: 1.6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+        }
+        .accordion-body {
+          @include rubik-font(400, $sm-font, normal);
+          background: rgb(255, 255, 255) !important;
+        }
+      }
+    }
+  }
+}

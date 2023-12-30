@@ -1,0 +1,488 @@
+// google font
+
+// rubik font family
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+// roboto font family
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+// css reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // outline: 1px solid red;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  counter-reset: my-counter 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: $black;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.custom-btn {
+  @include rubik-font(400, $md-font, normal);
+  border: 1.5px solid #e31b17;
+  outline: none;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  border-radius: 0;
+}
+
+.banner-heading {
+  @include big-john-font(400, $lg-font, normal);
+  color: $white;
+  span {
+    color: $primary-color;
+  }
+}
+
+.banner-sub-heading {
+  @include rubik-font(400, $md-font, normal);
+  color: $white;
+}
+
+.section-heading {
+  @include big-john-font(400, $xlg-font, normal);
+}
+
+.bold-sub-heading {
+  @include rubik-font(500, $lg-font, normal);
+}
+
+.section-sub-heading-after {
+  @include rubik-font(400, $lg-font, normal);
+  &::after {
+    margin-left: 0.5rem;
+    content: url("../images/navigator.svg");
+  }
+}
+
+.section-sub-heading-before {
+  @include rubik-font(400, $lg-font, normal);
+  &::before {
+    margin-right: 0.5rem;
+    content: url("../images/navigator.svg");
+  }
+}
+
+.paragraph {
+  @include rubik-font(300, $sm-font, 2.8rem);
+  text-align: justify;
+  letter-spacing: 0.036rem;
+}
+
+.col-with-vh1 {
+  position: relative;
+  .section-heading {
+    color: $secondary-dark-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 6rem;
+      border: 1.5px solid $secondary-dark-color;
+      transform: rotate(-90deg);
+      position: absolute;
+      top: -4rem;
+      left: -2rem;
+    }
+  }
+}
+
+.col-with-vh1-desc {
+  padding-left: 8rem;
+}
+
+.col-with-vh2 {
+  position: relative;
+  .section-heading {
+    color: $secondary-dark-color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    writing-mode: vertical-lr;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 6rem;
+      border: 1.5px solid $secondary-dark-color;
+      transform: rotate(90deg);
+      position: absolute;
+      top: 24rem;
+      left: -1.5rem;
+    }
+  }
+}
+
+.col-with-vh2-desc {
+  padding-right: 8rem;
+}
+
+// start of common class for text document content
+
+.description {
+  p {
+    margin-bottom: 20px !important;
+    @include rubik-font(300, $sm-font, 2.8rem);
+    text-align: justify;
+    letter-spacing: 0.036rem;
+    // font-family: Karla;
+    &:last-child {
+      margin-bottom: 0px !important;
+    }
+    a {
+      font-weight: 500;
+      font-style: italic;
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+    img {
+      margin: 20px 0px;
+      width: 100%;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 20px !important;
+  }
+
+  h1 {
+    @include rubik-font(00, $xlg-font, normal);
+  }
+
+  h2 {
+    @include rubik-font(00, $lg-font, normal);
+  }
+
+  h3 {
+    @include rubik-font(00, $md-font, normal);
+  }
+
+  h4 {
+    @include rubik-font(00, $sm-font, normal);
+  }
+
+  h5 {
+    @include rubik-font(00, $vsm-font, normal);
+  }
+
+  h6 {
+    @include rubik-font(00, 1.4rem, normal);
+  }
+
+  ol {
+    margin: 20px !important;
+    list-style: decimal;
+    li {
+      padding: 5px 0px;
+      display: list-item;
+      @include rubik-font(300, 1.8rem, 2.8rem);
+      text-align: justify;
+      letter-spacing: 0.036rem;
+      margin-bottom: 1rem;
+      a {
+        color: $primary-color !important;
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+
+  ul {
+    margin: 20px !important;
+    list-style: disc;
+    li {
+      @include rubik-font(300, 1.8rem, 2.8rem);
+      text-align: justify;
+      letter-spacing: 0.036rem;
+      margin-bottom: 1rem;
+      padding: 5px 0px;
+      display: list-item;
+      a {
+        color: $primary-color !important;
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+
+  blockquote {
+    margin: 40px 0px;
+
+    p {
+      position: relative;
+      font-weight: 400;
+      color: $primary-color;
+      padding: 2rem 1.5rem;
+      background: white;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        border: 2px solid $black;
+        height: 8rem;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+}
+
+// end of common class for text document content
+.eclipse {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background: linear-gradient(
+      0deg,
+      rgba(227, 27, 23, 0.7) 0%,
+      rgba(227, 27, 23, 0.7) 100%
+    ),
+    url("../images/eclipse.png") center no-repeat;
+  background-size: cover;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  position: relative;
+  .number {
+    &::after {
+      content: "0" counter(my-counter);
+      counter-increment: my-counter 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include big-john-font(400, 5rem, 2.8rem);
+      letter-spacing: 0.1rem;
+      color: $white;
+    }
+  }
+}
+
+.page-title-section {
+  figure {
+    position: relative;
+    figcaption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .page-title {
+        @include big-john-font(400, $lg-font, normal);
+        color: $white;
+      }
+    }
+  }
+}
+
+.breadcrumb-section {
+  background: black;
+  .breadcrumb {
+    margin: 0;
+    @include rubik-font(400, $sm-font, normal);
+    .breadcrumb-item {
+      a {
+        color: $white;
+      }
+    }
+    .breadcrumb-item ~ .breadcrumb-item {
+      &::before {
+        content: url("../images/ArrowRight.svg");
+        padding-top: 0.2rem;
+      }
+    }
+    .active {
+      color: $primary-color;
+    }
+  }
+}
+
+.custom-scrollbar {
+  padding-right: 0;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  .nav {
+    margin-right: 0 !important;
+  }
+  &::-webkit-scrollbar {
+    width: 1rem;
+    background: $secondary-light-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $secondary-dark-color;
+  }
+}
+
+// bold heading inside tab-content service page
+.service-detail {
+  .tab-content {
+    padding: 0 2rem;
+    .bold-sub-heading {
+      column-gap: 0.5rem;
+      &::before {
+        display: inline-block;
+        width: 3.6rem;
+        height: 3.6rem;
+        content: "";
+      }
+    }
+  }
+}
+
+// styling of form for all pages
+form {
+  .form-heading {
+    @include rubik-font(500, 2.4rem, normal);
+  }
+
+  .row {
+    row-gap: 1rem;
+    border-bottom: 2px solid $secondary-color;
+    input,
+    .invalid-feedback,
+    .valid-feedback,
+    .label-for-fileupload {
+      width: 100%;
+      padding: 1rem 2rem;
+      outline: none;
+      border: none;
+      border-radius: 0.5rem;
+      @include rubik-font(400, 1.6rem, normal);
+    }
+  }
+}
+
+// book appoinment page form styling
+.submission-section,
+.book-appoinment-section {
+  margin: 0;
+  @include rubik-font(400, 1.6rem, normal);
+  text-align: center;
+  color: $green;
+  button[type="submit"] {
+    padding: 1.5rem 10rem;
+    background: $green;
+    color: #fff;
+    border: 0;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: $dark-green;
+    }
+  }
+}
+
+// styling of table common element
+table {
+  @include rubik-font(400, $vsm-font, normal);
+
+  thead {
+    tr {
+      border-bottom-width: 0.3rem !important;
+      border-color: $secondary-dark-color;
+    }
+  }
+  tr {
+    th,
+    td {
+      padding: 2rem 0 !important;
+    }
+  }
+}
+
+// blog card common class for blog section and blog page
+.blog-card {
+  position: relative;
+  padding: 0 1rem;
+
+  &:hover {
+    figure {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    .blog-desc {
+      color: $primary-color;
+    }
+    &::after {
+      opacity: 1;
+      transform: translate(7rem, 4rem);
+    }
+  }
+  figure {
+    position: relative;
+    figcaption {
+      padding: 0.4rem 1.2rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include rubik-font(400, 1.4rem, normal);
+      background: rgba(239, 241, 237, 0.5);
+      color: $white;
+    }
+    img {
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  .blog-desc {
+    @include rubik-font(400, $md-font, normal);
+    text-align: justify;
+    @include line-clamp(2);
+    transition: all 0.5s ease-in-out;
+  }
+  &::after {
+    content: "\f061";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: $primary-color;
+    color: $white;
+    font-size: $md-font;
+    position: absolute;
+    top: 58%;
+    left: 75%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+}

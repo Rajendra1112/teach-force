@@ -1,0 +1,112 @@
+// about page styling
+.company-detail-1 {
+  padding: 8rem 0;
+  .container {
+    .row {
+      --bs-gutter-x: 2.5rem;
+      figure {
+        border-radius: 5rem;
+      }
+    }
+  }
+}
+
+.company-detail-2 {
+  padding: 8rem 0;
+  background: $secondary-light-color;
+  .container {
+    // our mission section or first row styling
+    .our-mission-section {
+      margin-bottom: 8rem;
+      .col-with-vh2 {
+        .section-heading {
+          height: 30rem;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    // our value section or second row styling
+    .our-value-section {
+      margin-bottom: 8rem;
+      .col-with-vh1 {
+        .section-heading {
+          &::before {
+            width: 6rem;
+            left: -1.2rem;
+          }
+        }
+        .col-with-vh1-desc {
+          .description {
+            ul {
+              list-style: none;
+              li {
+                display: flex;
+                &::before {
+                  content: "\f559";
+                  font-family: "Font Awesome 5 free";
+                  font-weight: 900;
+                  color: $primary-color;
+                  margin-right: 1rem;
+                  padding-top: 0.2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // our vision sectino
+    .our-vision-section {
+      .col-with-vh2 {
+        .section-heading {
+          height: 27rem;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// achevement section styling
+.achievement-section {
+  padding: 8rem 0;
+  .container {
+    .section-heading {
+      color: $secondary-dark-color;
+    }
+
+    .record {
+      margin: 0;
+      width: 100%;
+      background: linear-gradient(
+          0deg,
+          rgba(227, 27, 23, 0.6) 0%,
+          rgba(227, 27, 23, 0.6) 100%
+        ),
+        url("../images/record.png") center no-repeat;
+      background-size: cover;
+
+      .record-box {
+        padding: 3rem 1rem;
+        border-right: 1rem solid $white;
+        border-left: 1rem solid $white;
+        color: $white;
+        .stat {
+          @include rubik-font(500, $lg-font, normal);
+          &::before {
+            content: "+";
+          }
+        }
+        .stat-topic {
+          @include rubik-font(400, $sm-font, normal);
+        }
+      }
+    }
+  }
+}

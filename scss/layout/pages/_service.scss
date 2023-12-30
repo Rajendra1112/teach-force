@@ -1,0 +1,91 @@
+.service-detail {
+  padding: 8rem 0;
+  .container {
+    .description {
+      h2 {
+        &::before {
+          display: none;
+        }
+      }
+    }
+    .row {
+      .service-tabs-box {
+        position: sticky;
+        top: 20px;
+        padding: 1rem;
+        border: 2px solid $primary-color;
+        .nav {
+          row-gap: 1rem;
+          margin: 0 !important;
+          button {
+            @include rubik-font(400, $sm-font, normal);
+            border: none;
+            outline: none;
+            padding: 1rem 2rem;
+            border-radius: 0 !important;
+            background: $white;
+            color: $black !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+              display: none;
+              color: $primary-color;
+            }
+          }
+          .active {
+            background: $secondary-color;
+            span {
+              display: block;
+            }
+          }
+          button:first-child {
+            background: $primary-color;
+            color: $white !important;
+            cursor: default;
+          }
+        }
+      }
+
+      #resume-writing-content {
+        .bold-sub-heading {
+          &::before {
+            content: url("../images/resume-writing.png");
+          }
+        }
+      }
+
+      #visa-application-content {
+        .bold-sub-heading {
+          &::before {
+            content: url("../images/visa-application.png");
+          }
+        }
+      }
+
+      #profile-marketing-content {
+        .bold-sub-heading {
+          &::before {
+            content: url("../images/profile-marketing.png");
+          }
+        }
+      }
+
+      #job-consulting-content {
+        .bold-sub-heading {
+          &::before {
+            content: url("../images/job-consulting.png");
+          }
+        }
+      }
+
+      #interview-preparation-content {
+        .bold-sub-heading {
+          &::before {
+            content: url("../images/interview-preparation.png");
+          }
+        }
+      }
+    }
+  }
+}

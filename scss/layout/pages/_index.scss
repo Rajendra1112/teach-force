@@ -1,0 +1,253 @@
+// home section styling
+.home-section {
+  .owl-carousel {
+    figure {
+      position: relative;
+      img {
+        min-height: 32rem;
+      }
+      figcaption {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        .custom-btn {
+          border: none;
+          background: $primary-color;
+          color: $white;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            color: $black;
+            background: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// about section styling
+.about-section {
+  padding: 8rem 0;
+  .col-with-vh1 {
+    .col-with-vh1-desc {
+      .description {
+        p {
+          @include line-clamp(4);
+        }
+      }
+      .custom-btn {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background: $primary-color;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .about-us-img {
+    figure {
+      border-radius: 5rem;
+    }
+  }
+}
+
+// service section styling
+.service-section {
+  padding: 8rem 0;
+  background: $secondary-color;
+  .container {
+    .row {
+      --bs-gutter-y: 1.5rem;
+      .service-card {
+        background: transparent;
+        border: 1px solid #999;
+        border-radius: 0 !important;
+        padding: 3rem 2rem;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background: $white;
+        }
+        figure {
+          width: 8.5rem;
+          height: 8.5rem;
+        }
+        .card-title {
+          @include rubik-font(400, 2rem, normal);
+          text-align: center;
+        }
+        .card-body {
+          p {
+            @include rubik-font(300, $sm-font, normal);
+            @include line-clamp(3);
+            text-align: justify;
+          }
+        }
+      }
+
+      .col-with-vh2 {
+        .section-heading {
+          color: $white;
+          &::after {
+            border: 1.5px solid $white;
+          }
+        }
+        .col-with-vh2-desc {
+          .description {
+            p {
+              @include line-clamp(4);
+            }
+          }
+          .custom-btn {
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              background: $primary-color;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// youtube video section styling
+.youtube-video-section {
+  width: 100%;
+  height: 56rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/youtube.png") no-repeat center;
+  background-size: cover;
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    a {
+      color: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      i {
+        font-size: 4rem;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// blog-section-styling
+
+.blog-section {
+  padding: 8rem 0;
+  .container {
+    position: relative;
+    .section-heading {
+      color: $secondary-dark-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 6rem;
+        border: 1.5px solid $secondary-dark-color;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: -4rem;
+        left: -2rem;
+      }
+    }
+
+    .row {
+      padding-left: 8rem;
+    }
+  }
+}
+
+// partners section styling
+.partner-section {
+  padding: 8rem 0;
+  height: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/partners bg.png") center no-repeat;
+  background-size: cover;
+
+  .container {
+    .section-heading {
+      color: #585858;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 6rem;
+        height: 0.3rem;
+        background: #585858;
+        margin-bottom: 1rem;
+        margin-right: 0.5rem;
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 6rem;
+        height: 0.3rem;
+        background: #585858;
+        margin-bottom: 1rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    .partner-img-carousel {
+      padding: 0 4rem;
+      position: relative;
+
+      .owl-nav {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .owl-prev,
+        .owl-next {
+          font-size: 3rem;
+          background: transparent;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// quotation-section-styling
+.quotation-section {
+  padding: 8rem 0;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),
+    url("../images/quotation-section.png") no-repeat center;
+  background-size: cover;
+
+  .container {
+    .quotation {
+      @include rubik-font(300, $lg-font, normal);
+      figure {
+        width: 5rem;
+        height: 5rem;
+        display: inline-block;
+      }
+      p {
+        @include big-john-font(400, 1.6rem, normal);
+      }
+    }
+  }
+}

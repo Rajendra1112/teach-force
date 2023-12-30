@@ -1,0 +1,86 @@
+.contact-page-content {
+  padding: 8rem 0;
+  .location {
+    .container {
+      flex-wrap: wrap;
+      column-gap: 2rem;
+      row-gap: 2rem;
+      .earth {
+        width: 25rem;
+        height: 25rem;
+        // filter: drop-shadow(0px 0px 1.2px $black);
+        position: relative;
+        background: #0588e4 url("../images/earth.png");
+        background-size: cover;
+        border-radius: 50%;
+        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+        animation: rotateEarth 30s linear infinite;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          overflow: hidden;
+          z-index: 1;
+          background: url("../images/cloud.png");
+          background-size: cover;
+          animation: rotateEarth 30s linear infinite;
+        }
+        img {
+          position: absolute;
+          width: 60px;
+          height: 30px;
+          z-index: 2;
+          pointer-events: none;
+          transition: 0.5s ease-in-out;
+        }
+      }
+      .location-detail {
+        .country-name {
+          column-gap: 1.2rem;
+          figure {
+            width: 3rem;
+          }
+          p {
+            @include rubik-font(400, $md-font, normal);
+            margin: 0;
+          }
+        }
+
+        ul {
+          padding: 0;
+          list-style: none;
+          li {
+            .contact-link {
+              margin-bottom: 1rem;
+              @include rubik-font(400, $md-font, normal);
+              transition: all 0.3s ease-in-out;
+              &:hover {
+                color: $primary-color;
+              }
+            }
+            i {
+              width: 2rem;
+              height: 2rem;
+              font-size: $md-font;
+              margin-right: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotateEarth {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}

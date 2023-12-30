@@ -1,0 +1,675 @@
+// FOR LARGE TABLETS AND SMALL SCREEN LAPTOPS
+@media (max-width: 1024px) {
+  //   LANDING PAGE STYLING
+  //   header styling
+  header {
+    font-size: 1.6rem;
+    .social-media-header {
+      padding-right: 0;
+    }
+  }
+  .navbar-section {
+    .container {
+      .navbar {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  //   service section styling
+  .service-section {
+    .container {
+      .row {
+        .service-card {
+          .card-body {
+            .card-title {
+              height: 4.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //footer styling
+  footer {
+    .footer-1 {
+      .container {
+        .row {
+          .footer-title {
+            font-size: $vsm-font;
+            font-weight: 500;
+          }
+          .footer-links {
+            .footer-item {
+              .fa-location-dot {
+                padding-top: 0.2rem !important;
+              }
+              .footer-link {
+                font-size: $vsm-font;
+                line-height: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //   ABOUT PAGE STYLING
+  .company-detail-2 {
+    .container {
+      .our-mission-section,
+      .our-value-section,
+      .our-vision-section {
+        flex-wrap: nowrap;
+        column-gap: 1rem;
+        padding-right: 2rem;
+      }
+    }
+  }
+  // END OF MEDIA QUERY FOR LARGE TABLETS/LAPTOPS
+}
+
+// SMALL TABLET DEVICES
+@media (max-width: 991px) {
+  // LANDING PAGE STYLING
+
+  // header section styling
+  header {
+    font-size: $vsm-font;
+  }
+
+  // nav section
+  .navbar-collapse {
+    margin-top: 1rem;
+    .navbar-nav {
+      li:last-child {
+        width: max-content;
+      }
+    }
+  }
+  // about section styling
+  .about-section {
+    .row {
+      align-items: center;
+    }
+  }
+
+  //   common class styling
+  .col-with-vh1 {
+    position: static;
+    .section-heading {
+      margin-bottom: 1rem;
+      position: static;
+      writing-mode: horizontal-tb;
+      transform: none;
+      &::before {
+        position: static;
+        transform: none;
+      }
+    }
+  }
+
+  .col-with-vh1-desc {
+    padding-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .col-with-vh2 {
+    position: static;
+    .section-heading {
+      margin-bottom: 1rem;
+      position: static;
+      writing-mode: horizontal-tb;
+      transform: none;
+      &::after {
+        position: static;
+        transform: none;
+      }
+    }
+  }
+
+  .col-with-vh2-desc {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  //   service section styling
+  .service-section {
+    .container {
+      .row {
+        .col-with-vh2 {
+          order: 0 !important;
+        }
+      }
+    }
+  }
+
+  //   blog section styling
+  .blog-card {
+    &::after {
+      display: none;
+    }
+  }
+  .blog-section {
+    .container {
+      position: static;
+      .row {
+        row-gap: 3rem;
+      }
+      .section-heading {
+        margin-bottom: 2rem;
+        text-align: center;
+        position: static;
+        writing-mode: horizontal-tb;
+        transform: none;
+        &::before {
+          transform: none;
+          position: static;
+          width: 6rem;
+        }
+      }
+
+      .row {
+        padding-left: 0;
+      }
+    }
+  }
+
+  //   footer section styling
+  .footer-1 {
+    .row {
+      & > div {
+        &:nth-child(2) {
+          padding-left: 4rem;
+        }
+      }
+      row-gap: 3rem;
+      .footer-links {
+        .footer-item {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .footer-2 {
+    .row {
+      div {
+        text-align: center !important;
+      }
+    }
+  }
+
+  //    ABOUT PAGE STYLING
+  .company-detail-1 {
+    .row {
+      row-gap: 2rem;
+      div:first-child {
+        order: 1 !important;
+      }
+    }
+  }
+
+  .company-detail-2 {
+    .our-mission-section,
+    .our-vision-section {
+      align-items: center;
+    }
+
+    .eclipse {
+      width: 15rem;
+      height: 15rem;
+    }
+    .section-heading {
+      height: 4rem !important;
+      &::before {
+        width: 5rem !important;
+      }
+    }
+  }
+
+  .achievement-section {
+    .record-box {
+      border-top: 1rem solid #eff1ed;
+      border-bottom: 1rem solid #eff1ed;
+    }
+  }
+
+  //   JOB PAGE
+  .job-detail {
+    .main-content {
+      row-gap: 2rem;
+      & > div {
+        &:first-child {
+          height: 50vh;
+        }
+      }
+    }
+  }
+  // END OF MEDIA QUERY FOR 991 PX
+}
+
+// small device -768px
+@media (max-width: 767px) {
+  // LANDING PAGE STYLING
+  // header styling
+  header {
+    .container {
+      .row {
+        .contact-header,
+        .social-media-header {
+          padding: 0.5rem 0;
+          justify-content: center !important;
+          i {
+            margin: 0 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  // banner or home section
+  .home-img-carousel {
+    figcaption {
+      .banner-sub-heading {
+        display: none;
+      }
+    }
+  }
+  // about section styling
+  .about-section {
+    .container {
+      .row {
+        row-gap: 2rem;
+        .about-us-img {
+          order: -1;
+        }
+      }
+    }
+  }
+
+  // youtube section styling
+  .youtube-video-section {
+    height: 30rem;
+    i {
+      font-size: 3rem !important;
+    }
+  }
+
+  // footer styling
+  footer {
+    .footer-1 {
+      .row {
+        & > div {
+          &:nth-child(2) {
+            padding-left: calc(var(--bs-gutter-x) * 0.5);
+          }
+        }
+      }
+    }
+  }
+
+  // ABOUT US PAGE STYLING
+  .company-detail-2 {
+    .container {
+      .our-mission-section {
+        flex-wrap: wrap;
+        justify-content: center !important;
+        row-gap: 1rem;
+      }
+
+      .our-value-section {
+        flex-wrap: wrap;
+        justify-content: center !important;
+        row-gap: 1rem;
+        .eclipse {
+          order: -1;
+        }
+      }
+
+      .our-vision-section {
+        flex-wrap: wrap;
+        justify-content: center !important;
+        row-gap: 1rem;
+      }
+    }
+  }
+
+  // SERVICE PAGE STYLING
+  .service-detail {
+    .container {
+      .row {
+        row-gap: 2rem;
+      }
+    }
+  }
+
+  // JOB PAGE STYLING
+  .job-detail {
+    .container {
+      .row {
+        row-gap: 2rem;
+        & > div {
+          &:first-child {
+            height: 50vh;
+          }
+        }
+      }
+    }
+  }
+
+  // BOOK APPOINMENT PAGE
+  .book-appoinment-detail {
+    .container {
+      form {
+        .row {
+          row-gap: 2rem;
+        }
+      }
+    }
+  }
+
+  // UNIVERSITY LIST PAGE STYLING
+  .university-college-detail {
+    .container {
+      .search-section {
+        row-gap: 2rem;
+      }
+    }
+  }
+
+  // END OF MEDIAQUERY FOR 767PX
+}
+
+// MOBILE DEVICES - 576px very small devices
+@media (max-width: 575px) {
+  // common classes styling
+
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section-heading,
+  .section-sub-heading-after,
+  .section-sub-heading-before,
+  .page-title,
+  .form-heading {
+    font-size: $md-font !important;
+  }
+
+  a,
+  i,
+  .blog-desc,
+  .footer-title p {
+    font-size: $sm-font !important;
+  }
+
+  .section-sub-heading-after {
+    &::after {
+      content: "\f101";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: $primary-color;
+    }
+  }
+
+  .section-sub-heading-before {
+    &::before {
+      content: "\f101";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: $primary-color;
+    }
+  }
+
+  .bold-sub-heading {
+    font-size: 2.6rem;
+  }
+
+  .about-section,
+  .service-section,
+  .partner-section,
+  .blog-section,
+  .quotation-section,
+  .footer-1,
+  .company-detail-1,
+  .company-detail-2,
+  .achievement-section,
+  .service-detail,
+  .job-detail,
+  .form-detail,
+  .contact-page-content,
+  .book-appoinment-detail,
+  .university-college-detail,
+  .blog-detail,
+  .inner-blog-detail,
+  .terms-and-condition-detail,
+  .privacy-detail,
+  .error {
+    padding: 3rem 0 !important;
+  }
+
+  // quotation section styling
+  .quotation-section {
+    .container {
+      .quotation {
+        font-size: 2.4rem;
+        figure {
+          width: 3rem !important;
+          height: 3rem !important;
+        }
+        p {
+          font-size: $vvsm-font;
+        }
+      }
+    }
+  }
+
+  // ABOUT PAGE STYLING
+  .company-detail-2 {
+    .our-mission-section,
+    .our-value-section {
+      margin-bottom: 3rem !important;
+    }
+  }
+
+  // SERVICE PAGE STYLING
+  .service-detail {
+    .tab-content {
+      padding: 0;
+    }
+  }
+
+  // CONTACT PAGE STYLING
+  .contact-page-content {
+    .map {
+      .container {
+        iframe {
+          height: 20rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  // common classes styling
+
+  .section-heading,
+  .section-sub-heading-after,
+  .section-sub-heading-before,
+  .page-title,
+  .form-heading,
+  .card-title,
+  .stat {
+    font-size: $sm-font !important;
+  }
+
+  a,
+  i,
+  .blog-desc,
+  .footer-title,
+  p,
+  .company-detail,
+  .footer-2,
+  .stat-topic,
+  .custom-btn,
+  li {
+    font-size: $vsm-font !important;
+  }
+
+  .description {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: $sm-font !important;
+    }
+  }
+
+  .banner-heading {
+    br {
+      display: none;
+    }
+  }
+
+  .bold-sub-heading {
+    font-size: 2rem;
+  }
+
+  // service section styling
+  .service-card {
+    padding: 2rem 1rem !important;
+  }
+
+  // ABOUT PAGE STYLING
+  .company-detail-2 {
+    .eclipse {
+      width: 10rem !important;
+      height: 10rem !important;
+    }
+
+    .section-heading {
+      height: 2rem !important;
+    }
+  }
+
+  // SERVICE PAGE STYLING
+  .service-detail {
+    .service-tabs-box {
+      .nav {
+        button {
+          font-size: $vsm-font !important;
+        }
+      }
+    }
+  }
+
+  // JOB PAGE STYLING
+  .job-detail {
+    .first-tabs-box {
+      height: 30vh !important;
+      .nav {
+        button {
+          font-size: $vsm-font !important;
+          figure {
+            width: 4rem !important;
+            height: 4rem !important;
+          }
+        }
+      }
+    }
+    .second-tabs-box {
+      .nav {
+        button {
+          figure {
+            width: 2.5rem !important;
+            height: 2.5rem !important;
+          }
+          ul {
+            li:first-child {
+              font-size: $vsm-font !important;
+            }
+          }
+        }
+      }
+    }
+    .second-tabs-box-content {
+      .job-title {
+        font-size: $md-font !important;
+        margin-bottom: 1rem !important;
+      }
+      .job-apply-section {
+        ul {
+          flex-wrap: wrap;
+          row-gap: 0.5rem;
+        }
+        .custom-btn {
+          text-align: center;
+        }
+      }
+      .description {
+        ul {
+          padding-left: 0;
+        }
+        ol {
+          padding-left: 2.2rem !important;
+        }
+      }
+    }
+  }
+
+  //FORM PAGE STYLING
+  .form-detail {
+    form {
+      .experience-verification {
+        .col-12 {
+          flex-wrap: wrap !important;
+          row-gap: 1rem !important;
+        }
+      }
+    }
+  }
+
+  // CONTACT PAGE STYLING
+  .contact-page-content {
+    .paragraph {
+      font-size: $vsm-font !important;
+    }
+    .location-detail {
+      ul {
+        li:first-child {
+          margin-top: 0.5rem;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  // banner section styling
+  .banner-heading {
+    margin-bottom: 0.5rem !important;
+    br {
+      display: block;
+    }
+  }
+
+  // BLOG PAGE STYLING
+  .blog-detail {
+    .container {
+      .pagination-section {
+        .pagination-lg {
+          --bs-pagination-padding-x: 1rem;
+          --bs-pagination-padding-y: 0.4rem;
+        }
+      }
+    }
+  }
+}
